@@ -1,8 +1,57 @@
 <xml xmlns="http://www.w3.org/1999/xhtml" is_dbot="true" collection="false">
-  <variables>
-    <variable type="" id="V0leU~h~YC1A{.r~y-E/" islocal="false" iscloud="false">1-3-2-6:profit</variable>
-  </variables>
-    <block type="variables_get" id="fVN}f6jThyWKlu5p^icx">
-      <field name="VAR" id="V0leU~h~YC1A{.r~y-E/" variabletype="">1-3-2-6:profit</field>
-    </block>
+  <block type="trade_definition" id="+GqowP*S3tZMRK}/lKpL" deletable="false" x="0" y="0">
+    <statement name="TRADE_OPTIONS">
+      <block type="trade_definition_market" id="=q!$)o+f67zeIxeyp;O*" deletable="false" movable="false">
+        <field name="MARKET_LIST">synthetic_index</field>
+        <field name="SUBMARKET_LIST">jump_index</field>
+        <field name="SYMBOL_LIST">JD10</field>
+        <next>
+          <block type="trade_definition_tradetype" id=")iMZP;E+)f[as9,f9JrT" deletable="false" movable="false">
+            <field name="TRADETYPECAT_LIST">callput</field>
+            <field name="TRADETYPE_LIST">callput</field>
+            <next>
+              <block type="trade_definition_contracttype" id="*H5:KI[U@TpB#:|DqL4." deletable="false" movable="false">
+                <field name="TYPE_LIST">both</field>
+                <next>
+                  <block type="trade_definition_candleinterval" id="C=k=dBHF0iDk51qwTl]2" deletable="false" movable="false">
+                    <field name="CANDLEINTERVAL_LIST">60</field>
+                    <next>
+                      <block type="trade_definition_restartbuysell" id=",~iyQ/*41ivGNoJo_p$p" deletable="false" movable="false">
+                        <field name="TIME_MACHINE_ENABLED">FALSE</field>
+                        <next>
+                          <block type="trade_definition_restartonerror" id="5]DP,bBhbq5lecrG![lX" deletable="false" movable="false">
+                            <field name="RESTARTONERROR">TRUE</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="SUBMARKET">
+      <block type="trade_definition_tradeoptions" id="Fs{5J:*`4BB_,jy5os~v">
+        <mutation has_first_barrier="false" has_second_barrier="false" has_prediction="false"></mutation>
+        <field name="DURATIONTYPE_LIST">t</field>
+        <value name="DURATION" strategy_value="duration">
+          <shadow type="math_number_positive" id="8)!=U)OM-Y3}O,^syPW-">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="AMOUNT">
+          <shadow type="math_number_positive" id="J:AB)Tf792]r1Qb0qsj[">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="procedures_callreturn" id="@/z67a@$:KZiRs@%L75o">
+            <mutation name="1-3-2-6 Trade Amount"></mutation>
+            <data>sl]4#qf}-r:4N.t*5S2#</data>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
 </xml>
