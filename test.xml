@@ -1,0 +1,9 @@
+<xml xmlns="https://developers.google.com/blockly/xml" is_dbot="true" collection="false">
+  <block type="multiplier_take_profit" id="$wh9MR~wT6oZ%*#~B@qT" x="390" y="806">
+    <value name="AMOUNT">
+      <shadow type="math_number" id="c4CdKgtOjF.Kk%.8jw7m">
+        <field name="NUM">0</field>
+      </shadow>
+    </value>
+  </block>
+</xml>
