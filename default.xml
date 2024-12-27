@@ -1,4 +1,4 @@
-<xml xmlns="https://developers.google.com/blockly/xml" is_dbot="true" collection="false">
+<xml xmlns="http://www.w3.org/1999/xhtml" is_dbot="true" collection="false">
   <block type="trade_definition" id="0|$vi{Y=ZIOl2yBZvP{-" deletable="false" x="0" y="0">
     <statement name="TRADE_OPTIONS">
       <block type="trade_definition_market" id="mR+U?DMJf5(WxSMB,.[C" deletable="false" movable="false">
